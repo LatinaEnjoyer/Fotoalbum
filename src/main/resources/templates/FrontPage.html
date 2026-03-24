@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+
+    <meta charset="UTF-8">
+    <title>Fotoalbum</title>
+    <link rel="stylesheet" href="/static/style.css" th:href="@{style.css}">
+
+</head>
+<body>
+
+<header>
+    <h1>Goated GIFs</h1>
+</header>
+
+<h2 class="section-title">Some of the greatest GIFs in today's market</h2>
+
+<main>
+    <a th:href="@{/PageOne}" class="gifs-link">
+        <div class="gifs">
+        <img th:src="@{/img/Baby.gif}" alt="Laughing Baby">
+        <p>That's Crazy</p>
+        </div>
+    </a>
+
+    <a th:href="@{/PageTwo}" class="gifs-link">
+        <div class="gifs">
+            <img th:src="@{/img/XQC.gif}" alt="XQC">
+            <p>What?</p>
+        </div>
+    </a>
+
+    <a th:href="@{/PageThree}" class="gifs-link">
+        <div class="gifs">
+            <img th:src="@{/img/Kid.gif}" alt="Awkward Stare">
+            <p>Say what, my *?</p>
+        </div>
+    </a>
+
+    <a th:href="@{/PageFour}" class="gifs-link">
+        <div class="gifs">
+            <img th:src="@{/img/Speed.gif}" alt="IShowSpeed">
+            <p>My mom's kinda homeless</p>
+        </div>
+    </a>
+</main>
+
+<hr>
+
+<main>
+    <a th:each="gif : ${GIFList}" class="gifs-link">
+        <div class="gifs">
+            <img th:src="@{'/img/' + ${gif.getImage()}}" alt="">
+            <p th:text="${gif.getText()}"></p>
+        </div>
+    </a>
+</main>
+
+</body>
+</html>
