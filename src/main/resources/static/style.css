@@ -45,6 +45,10 @@ main {
     text-align: center;
 }
 
+.single-gif {
+    justify-content: center;
+}
+
 .gifs-link:hover {
     background-color: #278EF5;
     color: white;

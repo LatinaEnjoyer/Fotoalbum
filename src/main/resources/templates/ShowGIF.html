@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+
+  <meta charset="UTF-8">
+  <title>Goated GIF</title>
+  <link rel="stylesheet" href="/static/style.css" th:href="@{style.css}">
+
+</head>
+<body>
+
+<header>
+  <h1>Goated GIFs</h1>
+</header>
+
+<h2 class="section-title">Some of the greatest GIFs in today's market</h2>
+
+<div>
+  <div class="gifs single-gif">
+    <img th:src="@{'/img/' + ${gif.getImage()}}" alt="">
+    <p th:text="${gif.getText()}"></p>
+  </div>
+
+</div>
+
+
+
+<a th:href="@{/}">Back</a>
+
+</body>
+</html>

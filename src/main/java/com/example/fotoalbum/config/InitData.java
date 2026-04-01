@@ -13,8 +13,8 @@ public class InitData {
     public InitData(){
         GIFList.add(new GIFModel(1, "Baby.gif", "That's Crazy"));
         GIFList.add(new GIFModel(2, "Kid.gif", "Excusez-moi"));
-        GIFList.add(new GIFModel(3, "Speed.gif", "Say what, my diggah?"));
-        GIFList.add(new GIFModel(4, "XQC.gif", "My mom's kinda homeless"));
+        GIFList.add(new GIFModel(3, "Speed.gif", "My mom's kinda homeless"));
+        GIFList.add(new GIFModel(4, "XQC.gif", "What did he say?"));
     }
 
     public ArrayList<GIFModel> getGIFList() {
